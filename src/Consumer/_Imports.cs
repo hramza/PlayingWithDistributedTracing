@@ -1,0 +1,10 @@
+﻿global using Consumer.Abstractions;
+global using Consumer.Handlers;
+global using Consumer.Providers;
+global using Consumer.Workers;
+global using Nest;
+global using OpenTelemetry.Resources;
+global using OpenTelemetry.Trace;
+global using SearchEngine.Shared.Abstractions;
+global using SearchEngine.Shared.Infrastructure.Http;
+global using SearchEngine.Shared.Infrastructure.Kafka;
