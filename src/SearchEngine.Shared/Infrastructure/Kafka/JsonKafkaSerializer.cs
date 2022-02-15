@@ -10,10 +10,7 @@ namespace SearchEngine.Shared.Infrastructure.Kafka
 
         public static JsonKafkaSerializer<T> Instance { get; } = new JsonKafkaSerializer<T>();
 
-        public T Deserialize(ReadOnlySpan<byte> data, bool isNull, SerializationContext context)
-        {
-            return (T)JsonSerializer.Deserialize(data, typeof(T))!;
-        }
+        public T Deserialize(ReadOnlySpan<byte> data, bool isNull, SerializationContext context) =>  JsonSerializer.Deserialize<T>(data)!;
 
         public byte[] Serialize(T data, SerializationContext context) => Encoding.UTF8.GetBytes(JsonSerializer.Serialize(data));
     }
