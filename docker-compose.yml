@@ -21,8 +21,6 @@ services:
       dockerfile: ./src/Consumer/Dockerfile
     image: searchengine/consumer:latest
     container_name: consumer
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
       - broker
 
