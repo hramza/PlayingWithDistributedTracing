@@ -27,7 +27,7 @@ OpenTelemetry will capture the trace data(activity spans and tags) and use OpenT
 The only thing to do in order to run this sample is to fire up services using docker compose :
 
 ```
-docker compose up -d
+docker-compose up -d
 ```
 ![Alt text](Images/Docker.png?raw=true "docker services")
 
