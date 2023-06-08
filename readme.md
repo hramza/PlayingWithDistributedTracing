@@ -11,8 +11,8 @@
 ## Project
 We have two services that use distributed tracing.
 
-- Producer : .NET 6 Minimal API with compile time logging source generation that create a currency request and publish it to Kafka
-- Consumer : .NET 6 worker service that consumes the Kafka record, call a currency API to get the currency low and high price and store them in Elasticsearch
+- Kafka Producer : .NET 6 Minimal API with compile time logging source generation that create a currency request and publish it to Kafka
+- Kafka Consumer : .NET 6 worker service that consumes the Kafka record, call a currency API to get the currency low and high price and store them in Elasticsearch
 
 By using distributed tracing, we see the context from calling /index endpoint to elastic search indexing.
 
