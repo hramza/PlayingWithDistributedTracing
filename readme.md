@@ -1,4 +1,4 @@
-# Exploring distributed tracing
+# Distributed tracing
 ## Used tools :
 - .NET 6
 - OpenTelemetry
