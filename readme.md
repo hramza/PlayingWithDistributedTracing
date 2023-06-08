@@ -1,7 +1,7 @@
 # Distributed tracing
 ## Used tools :
 - .NET 6
-- Open Telemetry
+- OpenTelemetry
 - Zipkin
 - Prometheus
 - Elasticsearch
