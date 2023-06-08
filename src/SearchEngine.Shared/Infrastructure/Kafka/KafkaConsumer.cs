@@ -43,7 +43,7 @@ namespace SearchEngine.Shared.Infrastructure.Kafka
 
             var taskCompletionSource = new TaskCompletionSource<bool>();
 
-            var thread = new Thread(async () =>
+            new Thread(async () =>
             {
                 while (!cancellationToken.IsCancellationRequested)
                 {
@@ -69,9 +69,7 @@ namespace SearchEngine.Shared.Infrastructure.Kafka
             })
             {
                 IsBackground = true
-            };
-
-            thread.Start();
+            }.Start();
 
             return taskCompletionSource.Task;
         }
