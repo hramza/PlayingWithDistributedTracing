@@ -13,7 +13,7 @@ namespace SearchEngine.Shared
         [LoggerMessage(
             EventId = 1,
             Level = LogLevel.Information,
-            Message = "Consuming a record")]
+            Message = "Consumed a record")]
         public static partial void ConsumedARecord(this ILogger logger);
 
         [LoggerMessage(
