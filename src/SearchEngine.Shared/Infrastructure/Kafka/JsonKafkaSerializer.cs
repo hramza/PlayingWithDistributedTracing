@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace SearchEngine.Shared.Infrastructure.Kafka
 {
-    public class JsonKafkaSerializer<T> : ISerializer<T>, IDeserializer<T> where T : class
+    public sealed class JsonKafkaSerializer<T> : ISerializer<T>, IDeserializer<T> where T : class
     {
         private JsonKafkaSerializer() { }
 

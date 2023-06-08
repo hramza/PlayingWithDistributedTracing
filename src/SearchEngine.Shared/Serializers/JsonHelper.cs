@@ -12,10 +12,7 @@ namespace SearchEngine.Shared.Serializers
             NumberHandling = JsonNumberHandling.AllowReadingFromString
         };
 
-        static JsonHelper()
-        {
-            JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-        }
+        static JsonHelper() => JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 
         public static T? Deserialize<T>(string jsonString) => JsonSerializer.Deserialize<T>(jsonString, JsonSerializerOptions);
 
